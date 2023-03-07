@@ -37,24 +37,25 @@ void Show2dArray(int[,] array)
 
 void Find_element (int[,] array)
 {
+    Console.Write("input index a: ");
+    int index_A = Convert.ToInt32(Console.ReadLine());
+    Console.Write("input index b: ");
+    int index_B = Convert.ToInt32(Console.ReadLine());
+    
     for (int i = 0; i < array.GetLength(0); i++)
     {
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            Console.Write("input index a: ");
-            int index_A = Convert.ToInt32(Console.ReadLine());
-            Console.Write("input index b: ");
-            int index_B = Convert.ToInt32(Console.ReadLine());
-            if (index_A == i && index_B == j)
+            if (index_A <= array.GetLength(0) && index_B <= array.GetLength(1))
             {
-                Console.Write("such number is a array");
+              Console.WriteLine($"{array[index_A,index_B]} - such number is a array ");
             }
             else
             {
-              Console.Write("such number is not a array");  
+              Console.WriteLine($"such number is NOT a array "); 
             }
 
-       } 
+        } 
     }
 
 }
