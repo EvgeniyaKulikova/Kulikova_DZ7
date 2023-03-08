@@ -49,6 +49,7 @@ void Find_element (int[,] array)
             if (index_A <= array.GetLength(0) && index_B <= array.GetLength(1))
             {
               Console.WriteLine($"{array[index_A,index_B]} - such number is a array ");
+              break;
             }
             else
             {
